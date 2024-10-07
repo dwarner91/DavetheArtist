@@ -18,11 +18,16 @@ $('.tall').css({'width': '150px', 'height': '210px'})
 // });
 // $('img').()
 
-$('.selected').css({'border': '5px solid red'})
+$('.selected').css({'border': '5px solid red'});
 
 $('input').click(function(){
   // $(this).css({'border': '5px solid red'})
+  $('input').removeClass("selected");
   $(this).toggleClass("selected");
+  $('img').addClass('displayed');
+  var $domo = $(this).attr("alt");
+  $(`${'#' + $domo}`).removeClass('displayed'); 
+   
 });
 });
 

@@ -1,1 +1,9 @@
-.selected {border: 5px solid red};
+.selected {
+    border: 5px groove #E34234
+}
+
+
+
+.displayed {
+    display: none 
+    }

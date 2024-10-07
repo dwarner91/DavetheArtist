@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width">
     <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <header><h1>Hello, my name is Dave! I'm an artist, and this is my gallery!</h1></header>
@@ -13,10 +14,15 @@
     <!-- <h2>If you mouse over a picture, it will enlarge so you can see it better! You can also click on the drawings to rotate them 90 degrees clockwise! Sometimes it helps to see 
       things from a different perspective!
     </h2> -->
+    <h2>Click on a picture from the gallery and a larger image will appear below!</h2>
     <main>
-      <input type="image" src="dove.jpg" alt="Dove wielding a katana" class="wide">
-      <input type="image" src="Eldritch Butterfly Final.jpg" alt="Eldritch Butterfly Monster" class="square">
-      <input type="image" src="singer.jpg" alt="Portrait of a Singer" class="tall">
+      <input type="image" src="dove.jpg" alt="Dove" class="wide">
+      <input type="image" src="Eldritch Butterfly Final.jpg" alt="Butterfly" class="square">
+      <input type="image" src="singer.jpg" alt="Singer" class="tall">
+      <br>
+      <img src="dove.jpg" alt="Dove wielding a katana" id="Dove" class="displayed">
+      <img src="Eldritch Butterfly Final.jpg" alt="Butterfly" id="Butterfly" class="displayed">
+      <img src="singer.jpg" alt="Portrait of a Singer" id="Singer" class="displayed">
       <p>I really hope you've enjoyed my art!</p>
      </main>
     <footer></footer>
