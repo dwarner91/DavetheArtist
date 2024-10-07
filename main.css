@@ -1,9 +1,15 @@
 .selected {
-    border: 5px groove #E34234
+    border: 10px groove gold;
 }
 
-
-
 .displayed {
-    display: none 
+    display: none; 
     }
+
+input {
+    margin-right: 20px;
+}
+
+body {
+    background-color:blueviolet;
+}

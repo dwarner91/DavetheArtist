@@ -18,12 +18,19 @@ $('.tall').css({'width': '150px', 'height': '210px'})
 // });
 // $('img').()
 
-$('.selected').css({'border': '5px solid red'});
+// $('.selected').css({'border': '5px solid red'});
+
+$('input').mouseenter(function(){
+  $(this).css({position: 'relative'}).animate({top: '20px'}, 200);
+});
+
+$('input').mouseleave(function(){
+  $(this).css({position: 'static', top: '0'})
+});
 
 $('input').click(function(){
-  // $(this).css({'border': '5px solid red'})
   $('input').removeClass("selected");
-  $(this).toggleClass("selected");
+  $(this).toggleClass("selected").css({position: 'static'});
   $('img').addClass('displayed');
   var $domo = $(this).attr("alt");
   $(`${'#' + $domo}`).removeClass('displayed'); 
