@@ -22,10 +22,12 @@ $('.tall').css({'width': '150px', 'height': '210px'})
 
 $('input').mouseenter(function(){
   $(this).css({position: 'relative'}).animate({top: '20px'}, 200);
+  $(this).siblings().css({visibility: 'visible'});
 });
 
 $('input').mouseleave(function(){
-  $(this).css({position: 'static', top: '0'})
+  $(this).css({position: 'static', top: '0'});
+  $(this).siblings().css({visibility: 'hidden'});
 });
 
 $('input').click(function(){
@@ -41,6 +43,8 @@ $('input').click(function(){
 // $('input').click(function(){
 //   $('input').addClass('selected');
 // });
+
+
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);

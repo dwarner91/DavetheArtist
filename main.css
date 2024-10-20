@@ -13,3 +13,21 @@ input {
 body {
     background-color:blueviolet;
 }
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0,0,0, 0.75);
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+div {
+    display: inline;
+    position: relative;
+}
+

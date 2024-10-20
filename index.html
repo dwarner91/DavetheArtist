@@ -1,30 +1,49 @@
 <head>
-    <title>Hello jQuery world!</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
-    <header><h1>Hello, my name is Dave! I'm an artist, and this is my gallery!</h1></header>
-    <nav></nav>
-    <!-- <button id="enlarge">Click here to enlarge the drawing!</button>
+  <title>Hello jQuery world!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hello, my name is Dave! I'm an artist, and this is my gallery!</h1>
+  </header>
+  <nav></nav>
+  <!-- <button id="enlarge">Click here to enlarge the drawing!</button>
     <button id="shrink">Click here to shrink the drawing!</button> -->
-    <!-- <h2>If you mouse over a picture, it will enlarge so you can see it better! You can also click on the drawings to rotate them 90 degrees clockwise! Sometimes it helps to see 
+  <!-- <h2>If you mouse over a picture, it will enlarge so you can see it better! You can also click on the drawings to rotate them 90 degrees clockwise! Sometimes it helps to see 
       things from a different perspective!
     </h2> -->
-    <h2>Click on a picture from the gallery and a larger image will appear below!</h2>
-    <main>
-      <input type="image" src="dove.jpg" alt="Dove" class="wide">
-      <input type="image" src="Eldritch Butterfly Final.jpg" alt="Butterfly" class="square">
-      <input type="image" src="singer.jpg" alt="Singer" class="tall">
-      <br>
-      <img src="dove.jpg" alt="Dove wielding a katana" id="Dove" class="displayed">
-      <img src="Eldritch Butterfly Final.jpg" alt="Butterfly" id="Butterfly" class="displayed">
-      <img src="singer.jpg" alt="Portrait of a Singer" id="Singer" class="displayed">
-      <p>I really hope you've enjoyed my art!</p>
-     </main>
-    <footer></footer>
+  <h2>Click on a picture from the gallery and a larger image will appear below!</h2>
+  <main>
 
-  </body>
+    <div>
+      <input type="image" src="dove.jpg" alt="Dove" class="wide">
+      <span class="tooltip">I inked this dove after I drew it in pencil.</span>
+    </div>
+    <div>
+      <input type="image" src="Eldritch Butterfly Final.jpg" alt="Butterfly" class="square">
+      <span class="tooltip">I photobashed this in photoshop.</span>
+    </div>
+    <div>
+      <input type="image" src="singer.jpg" alt="Singer" class="tall">
+      <span class="tooltip">I drew this using graphite pencils.</span>
+    </div>
+    <div>
+      <input type="image" src="eyes.jpg" alt="Eyes" class="tall">
+      <span class="tooltip">I drew these with graphite and charcoal.</span>
+    </div>
+
+    <br>
+    <img src="dove.jpg" alt="Dove wielding a katana" id="Dove" class="displayed">
+    <img src="Eldritch Butterfly Final.jpg" alt="Butterfly" id="Butterfly" class="displayed">
+    <img src="singer.jpg" alt="Portrait of a Singer" id="Singer" class="displayed">
+    <img src="eyes.jpg" alt="Eyes" id="Eyes" class="displayed">
+    <p>I really hope you've enjoyed my art!</p>
+  </main>
+  <footer></footer>
+
+</body>
