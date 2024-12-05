@@ -1,6 +1,3 @@
-function updateEnemy(x) {
-    currentEnemy = x;
-}
 
 var playerHealth = 100;
 
@@ -21,24 +18,31 @@ var score = 0;
 
 function spawnEnemy() {
     enemy = Math.floor(Math.random() * 4);
-    updateEnemy(enemy);
-    console.log(enemy);
-    if (enemy == 0) {
+    if(currentEnemy === enemy){
+        if(currentEnemy <= 2) {
+        currentEnemy = enemy+1;
+        } else {
+            currentEnemy = 0;
+        }
+    } else {
+        currentEnemy = enemy
+    }
+    if (currentEnemy == 0) {
         enemyName = "Cthulhu"
         alt = "cthulhu"
         $("main").append("<img src= 'enemies/cthulhu.png' alt='Cthulhu' style='transform: rotateY(180deg)' id='cthulhu'>")
 
-    } else if (enemy == 1) {
+    } else if (currentEnemy == 1) {
         enemyName = "The Destroyer"
         alt = "destroyer"
         $("main").append("<img src= 'enemies/destroyer.jpg' alt='Destroyer' id='destroyer'>")
 
-    } else if (enemy == 2) {
+    } else if (currentEnemy == 2) {
         enemyName = "The Spider Queen"
         alt = "spider"
         $("main").append("<img src= 'enemies/spider queen.png' alt='Spider Queen' style='transform: rotateY(180deg)' id= 'spider'>")
         
-    } else if (enemy == 3) {
+    } else if (currentEnemy == 3) {
         enemyName = "The Storm Giant"
         alt = "giant"
         $("main").append("<img src= 'enemies/storm giant.png' alt='Storm Giant' id= 'giant'>")
@@ -296,7 +300,7 @@ function damageCalculation() {
 }
 
 function healCalculation() {
-    return Math.floor(Math.random() * (18 - 16 + 1) ) + 16;
+    return Math.floor(Math.random() * (20 - 18 + 1) ) + 18;
  }
 
 
@@ -319,6 +323,10 @@ function battle() {
                 $("#battletext").remove()
                 $("footer").append(`<h1 id= 'battletext'>You vanquished ${enemyName}!`)
                 setTimeout(function(){
+                    playerHealth = 100;
+                    $("#player").text(playerHealth + maxHealth);
+                    enemyHealth = 100;
+                    $("#enemy").text(enemyHealth + maxHealth);
                     $("#score").text("Score: " + ++score);
                     spawnEnemy();
                     $("#enemy").css({display: "inline"});
